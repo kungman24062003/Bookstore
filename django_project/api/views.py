@@ -15,4 +15,6 @@ class ItemListView(APIView):
         serializer = ItemSerializer(items, many=True)
         return Response(serializer.data)
 
+def home(request):
+    return render(request, 'home.html')
 # Create your views here.
